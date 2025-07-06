@@ -27,8 +27,9 @@ pipeline{
             }
         stage("Deploy"){
             steps {
-                echo "deploying the code"
+                echo "Docker Compose is in progress"
                 sh "docker-compose down && docker-compose up -d"
+                echo "Docker Compose completed"
             }
         }
    }
